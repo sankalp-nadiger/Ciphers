@@ -50,18 +50,5 @@ public static class ElGamal {
             // Calculate m = c2 * s^(-1) mod p
             return c2.multiply(s.modInverse(p)).mod(p);
         }
+    
     }
-
-    // Utility methods
-    private static int gcd(int a, int b) {
-        if (b == 0) return a;
-        return gcd(b, a % b);
-    }
-
-    private static int modInverse(int a, int m) {
-        ExtendedEuclidean.Result result = ExtendedEuclidean.compute(a, m);
-        ExtendedEuclidean.Result result = ExtendedEuclidean.compute(a, m);
-        int x = result.x;
-        return (x % m + m) % m;
-    }
-

@@ -47,20 +47,6 @@ public class CryptographicAlgorithms {
         }
     }
 
-    /*public static int gcd(int a, int b) {
-        return b == 0 ? a : gcd(b, a % b);
-    }
-
-    public static int modInverse(int a, int m) {
-        a = a % m;
-        for (int x = 1; x < m; x++) {
-            if ((a * x) % m == 1) {
-                return x;
-            }
-        }
-        throw new IllegalArgumentException("Modular inverse does not exist");
-    }*/
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Affine Cipher:");
