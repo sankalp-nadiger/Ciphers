@@ -1,3 +1,6 @@
+import java.util.*;
+import java.io.*;
+
 public static class ExtendedEuclidean {
     static class Result {
         int gcd, x, y;

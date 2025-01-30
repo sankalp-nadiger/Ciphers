@@ -1,3 +1,7 @@
+import java.math.BigInteger;
+import java.util.Random;
+import java.util.Scanner;
+
 public static class ElGamal {
     private BigInteger p, g, x, y;
     private Random rand = new Random();

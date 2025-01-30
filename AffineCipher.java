@@ -1,10 +1,5 @@
 import java.util.Scanner;
-import java.security.SecureRandom;
-
-public class CryptographicAlgorithms {
-    private static final SecureRandom random = new SecureRandom();
-
-    public static class AffineCipher {
+public class AffineCipher {
         public static String encrypt(String text, int a, int b) {
             if (gcd(a, 26) != 1) {
                 throw new IllegalArgumentException("'a' must be coprime with 26");
