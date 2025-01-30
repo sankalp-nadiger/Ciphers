@@ -1,6 +1,5 @@
 import java.util.*;
 import java.io.*;
-
 public static class ExtendedEuclidean {
     static class Result {
         int gcd, x, y;
@@ -10,12 +9,10 @@ public static class ExtendedEuclidean {
             this.y = y;
         }
     }
-
     public static Result compute(int a, int b) {
         if (a == 0) {
             return new Result(b, 0, 1);
         }
-
         Result temp = compute(b % a, a);
         int x = temp.y - (b / a) * temp.x;
         int y = temp.x;
