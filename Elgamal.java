@@ -2,16 +2,16 @@ import java.math.BigInteger;
 import java.util.Random;
 import java.util.Scanner;
 
-public static class ElGamal {
+public class Elgamal {
     private BigInteger p, g, x, y;
     private Random rand = new Random();
 
-    public ElGamal(int bitLength) {
+    public Elgamal(int bitLength) {
         generateKeys(bitLength);
     }
 
     private void generateKeys(int bitLength) {
-        p = BigInteger.probablePrime(bitLength, random);
+        p = BigInteger.probablePrime(bitLength, rand);
 
         g = BigInteger.valueOf(2);
         while (!isGenerator(g, p)) {

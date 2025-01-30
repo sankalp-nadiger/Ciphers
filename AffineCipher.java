@@ -40,7 +40,7 @@ public class AffineCipher {
             }
             return result.toString();
         }
-    }
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -63,4 +63,17 @@ public class AffineCipher {
         String decrypted = AffineCipher.decrypt(encrypted, a, b);
         System.out.println("Decrypted: " + decrypted);
     }
+    private static int gcd(int a, int b) {
+        if (b == 0) return a;
+        return gcd(b, a % b);
+    }
+    public static int modInverse(int a, int m) {
+        a = a % m;
+        for (int x = 1; x < m; x++) {
+            if ((a * x) % m == 1) {
+                return x;
+            }
+        }
+        throw new IllegalArgumentException("Modular inverse does not exist");
+    }    
 }

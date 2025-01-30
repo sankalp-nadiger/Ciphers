@@ -1,4 +1,7 @@
-public static class VigenereCipher {
+import java.util.*;
+import java.io.*;
+
+public class VigenereCipher {
     public static String encrypt(String text, String key) {
         StringBuilder result = new StringBuilder();
         text = text.toUpperCase();
